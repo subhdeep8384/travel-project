@@ -1,0 +1,53 @@
+/* Container to hold video and overlay */
+.video-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Stretch the video to cover the whole container */
+.video-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Overlay containing text and buttons */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    z-index: 1;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.3); /* Optional: semi-transparent background */
+}
+
+.overlay h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.overlay button {
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: #ff5e57;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.overlay button:hover {
+    background-color: #ff3c2f;
+}

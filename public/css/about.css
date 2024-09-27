@@ -1,0 +1,97 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url("https://wallpaperaccess.com/full/706923.jpg");
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+header {
+    background: #35424a;
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+    animation: slideDown 0.5s ease-in-out;
+}
+
+main {
+    padding: 20px;
+}
+
+h2 {
+    color: #35424a;
+}
+
+.owner {
+    background: #e2e2e2;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 5px;
+    transform: translateY(20px);
+    opacity: 0;
+    animation: fadeInUp 0.5s forwards;
+}
+
+#company-intro {
+    margin-top: 20px;
+}
+
+#intro-text {
+    display: none;
+    margin-top: 15px;
+}
+
+button {
+    background-color: #35424a;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    transform: translateY(20px);
+    opacity: 0;
+    animation: fadeInUp 0.5s forwards;
+}
+
+button:hover {
+    background-color: #1e272e;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #35424a;
+    color: #ffffff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Animations */
+@keyframes slideDown {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    opacity: 0;
+}
+
+.fade-in.show {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
