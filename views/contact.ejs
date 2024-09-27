@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="../css/contact.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Contact Us</h1>
+    </header>
+    <main>
+        <section id="contact-info">
+            <h2>Helpline Number</h2>
+            <p class="helpline">📞 <strong>Helpline: xxxx7889</strong></p>
+        </section>
+        <section id="owner-details">
+            <h2>Meet the Owners</h2>
+            <div class="owner fade-in">
+                <h3>Subhdeep</h3>
+                <p>Subhdeep is passionate about travel and customer satisfaction. He ensures every client has a memorable experience.</p>
+            </div>
+            <div class="owner fade-in">
+                <h3>Kunal</h3>
+                <p>Kunal brings creativity and vision to the company. He focuses on unique travel experiences that cater to every traveler.</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Travel Company. All Rights Reserved.</p>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+    // GSAP animations on page load
+    gsap.from("header", { duration: 1, y: -50, opacity: 0, ease: "power2.out" });
+    gsap.from(".helpline", { duration: 1, y: 50, opacity: 0, ease: "power2.out", delay: 0.5 });
+    
+    // Animate owner details
+    const owners = document.querySelectorAll('.owner');
+    owners.forEach((owner, index) => {
+        gsap.from(owner, { duration: 1, y: 50, opacity: 0, ease: "power2.out", delay: 0.5 + index * 0.3 });
+    });
+
+    // Adding click animations for owner details
+    owners.forEach(owner => {
+        owner.addEventListener('click', () => {
+            gsap.to(owner, { duration: 0.5, scale: 1.1, ease: "bounce.out", yoyo: true, repeat: 1 });
+        });
+    });
+});
+    </script>
+</body>
+</html>
